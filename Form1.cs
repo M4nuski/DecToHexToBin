@@ -11,13 +11,18 @@ namespace Dec2Hex
         public Form1()
         {
             InitializeComponent();
+            toolTip1.SetToolTip(textBox1, "Decimal");
+            toolTip1.SetToolTip(textBox2, "Hexadecimal");
+            toolTip1.SetToolTip(textBox3, "Press <Enter> to add all current values to this log");
+            toolTip1.SetToolTip(textBox4, "Binary");
+
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox3.AppendText(textBox1.Text + " -> 0x" + textBox2.Text + " b'" + textBox4.Text + "'\n");
+                textBox3.AppendText(textBox1.Text + " = 0x" + textBox2.Text + " = b'" + textBox4.Text + "'\n");
                 e.SuppressKeyPress = true;
             }
         }
