@@ -22,7 +22,7 @@ namespace Dec2Hex
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox3.AppendText(textBox1.Text + " = 0x" + textBox2.Text + " = b'" + textBox4.Text + "'\n");
+                textBox3.AppendText(textBox1.Text + " = 0x" + textBox2.Text + " = b'" + textBox4.Text + "'\r\n");
                 e.SuppressKeyPress = true;
             }
         }
